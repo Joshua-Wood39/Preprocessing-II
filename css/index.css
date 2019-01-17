@@ -1,3 +1,20 @@
+@keyframes morph {
+  0% {
+    text-align: center;
+  }
+  25% {
+    text-align: right;
+  }
+  50% {
+    text-align: center;
+  }
+  75% {
+    text-align: left;
+  }
+  100% {
+    text-align: center;
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -325,6 +342,15 @@ img {
   .home .content-pick .destination .btn {
     width: 100%;
   }
+}
+.home .content-pick .destination .btn:hover {
+  cursor: pointer;
+  animation-name: morph;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  color: #17A2B8;
+  background-color: #C0C0C0;
+  border: 2px, solid, black;
 }
 @media ((max-width: 500px)) {
   .home .content-pick .destination {
