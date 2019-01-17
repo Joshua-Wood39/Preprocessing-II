@@ -1,1 +1,17 @@
 // Mixins in here
+
+.testbox (@color) {
+    border: 2px solid @color;
+}
+
+.custom-layout (@display, @justify, @align) {
+    display: @display;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.custom-btn (@btncolor, @btnbgcolor, @btnfontsize) {
+    color: @btncolor;
+    background-color: @btnbgcolor;
+    font-size: @btnfontsize;
+}
