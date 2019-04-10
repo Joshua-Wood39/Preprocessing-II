@@ -1,16 +1,31 @@
 .home {
 
+    header {
+      margin-top: 20px;
+    }
+
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+    @media (@mobile) {
+      max-width: 480px;
+      width: 100%;
+      flex-flow: column nowrap;
+
+
+    }
     
     .text-content {
       width: 48%;
-      padding-right: 1%;
+      padding-right: 1%; 
+        @media (@mobile) {
+          max-width: 480px;
+          width: 100%;
+        }
+
     }
 
     .img-content {
@@ -19,7 +34,21 @@
 
       img {
         border-radius: 10px;
+
+        @media (@mobile) {
+          max-width: 480px;
+          width: 100%;
+          
+        }
       }
+
+      @media (@mobile) {
+        max-width: 480px;
+        width: 100%;
+        padding-left: 0;
+      }
+
+    
     }
   }
 
@@ -36,6 +65,13 @@
       padding-right: 1%;
       padding-left: 0;
     }
+
+    @media (@mobile) {
+      .img-content {
+        order: 1;
+      }
+      
+    }
   }
 
   .content-destination {
@@ -44,6 +80,11 @@
 
     img {
       border-radius: 10px;
+    }
+
+    @media (@mobile) {
+      max-width: 480px;
+      width: 100%;
     }
   }
 
@@ -56,6 +97,39 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+        .btn {
+          padding: 13px 30px;
+          border-radius: 12px;
+          width: 80%;
+          font-weight: bold;
+          text-align: center;
+          .custom-btn(@main-bg, @button-bg, 19px);
+
+          @media (@mobile) {
+            width: 100%;
+          }
+        }
+
+        .btn:hover {
+          cursor: pointer;
+          .animate(morph, 3s, 1);
+          color: @button-bg;
+          background-color: @navigation-border;
+          .border(2px, solid, black);
+        }
+
+        @media (@mobile) {
+          max-width: 400px;
+          width: 100%;
+        }
+    }
+
+    @media (@mobile) {
+
+      flex-flow: column nowrap;
+      align-items: center;
+      
     }
   }
 }// home
